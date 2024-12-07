@@ -1,0 +1,24 @@
+<h1>Listado de Autos</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Año</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        {% for auto in autos %}
+            <tr>
+                <td>{{ auto.Marca }}</td>
+                <td>{{ auto.Modelo }}</td>
+                <td>{{ auto.Años }}</td>
+                <td>${{ auto.Precio }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{% url 'busqueda_autos' %}">Buscar Autos</a>

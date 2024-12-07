@@ -1,0 +1,23 @@
+
+<html>
+    <body>
+        <p>Estás buscando: <strong>{{ query }}</strong></p>
+
+        {% if autos %}
+            <p>Se encontraron {{ autos|length }} autos:</p>
+            <ul>
+                {% for auto in autos %}
+                    <li>
+                        Marca: {{ auto.Marca }} &nbsp;
+                        Modelo: {{ auto.Modelo }} &nbsp;
+                        Año: {{ auto.Años }} &nbsp;
+                        Precio: ${{ auto.Precio }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No se encontró ningún auto con la descripción ingresada.</p>
+        {% endif %}
+    </body>
+</html>
+

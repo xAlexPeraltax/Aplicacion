@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>Búsqueda de Autos</title>
+</head>
+
+<body>
+    <h1>Buscar Autos</h1>
+    <form action="{% url 'buscar' %}" method="GET">
+        <label for="prd">Ingrese Marca o Modelo:</label>
+        <input type="text" id="prd" name="prd"> 
+        <input type="submit" value="Buscar">
+    </form> 
+</body>
+</html>
